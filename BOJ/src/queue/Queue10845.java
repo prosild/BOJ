@@ -39,7 +39,7 @@ public class Queue10845 {
 					System.out.println(-1);
 				
 				} else {
-
+					
 					System.out.println(pushs.get(0));
 					pushs.remove(0);
 				
