@@ -65,7 +65,7 @@ public class Parenthesis9012 {
 
 			if (compare.size() == 0) {
 				
-				if (result[idx].equals("NO")) {
+				if ("NO".equals(result[idx])) {
 					
 				} else {
 					result[idx] = "YES";					
