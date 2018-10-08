@@ -12,7 +12,9 @@ public class ValueOfParenthesis2504 {
 		String[] cmd;
 
 		do {
+
 			cmd = scan.next().split("");
+
 		} while (cmd.length < 1 || cmd.length > 30);
 
 		for (int idx = 0; idx < cmd.length; idx++) {
@@ -23,23 +25,46 @@ public class ValueOfParenthesis2504 {
 
 			} else {
 
+				String top = stack.peek();
+
 				if (cmd[idx].equals(")")) {
 
 					stack.pop();
-					stack.push("2");
+					
+					stack.push(calc("2", top));
 
 				} else {
 
 					stack.pop();
-					stack.push("3");
+
+					stack.push(calc("3", top));
 
 				}
 
 			}
 
 		}
+		
+		for (String temp : stack) {
+			System.out.println(temp);
+		}
 
 		scan.close();
 	}
 	
+	public static String calc(String push, String top) {
+	
+		int sum;
+		
+		if (top.equals("2") || top.equals("3")) {
+			
+			sum = Integer.parseInt(push) + Integer.parseInt(top);
+
+		} else {
+			
+			sum = Integer.parseInt(push);
+		}
+		
+		return String.valueOf(sum);
+	}
 }
