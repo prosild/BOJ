@@ -10,25 +10,29 @@ public class Fibonacci2747 {
 		
 		int index = scan.nextInt();
 		
-		System.out.println(fibo(index));
+		int a = 0;
+		int b = 1;
+		int sum = 0;
+		
+		for (int idx = 1; idx < index; idx++) {
+			int temp = b;
+			
+			sum = a + b;
+			
+			a = temp;
+			b = sum;
+		}
+		
+		if (index == 0) {
+			System.out.println(0);
+		} else if (index == 1) {
+			System.out.println(1);
+		} else {			
+			System.out.println(sum);
+		}
+		
 		
 		scan.close();
 	}
 	
-	public static int fibo(int idx) {
-		
-		int result;
-		
-		if (idx <= 1) {
-			
-			result = idx;
-			
-		} else {
-			
-			result = fibo(idx - 2) + fibo(idx - 1);
-			
-		}
-		
-		return result;
-	}
 }
