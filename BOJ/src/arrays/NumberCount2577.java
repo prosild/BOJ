@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Scanner;
 
-public class NumberCount {
+public class NumberCount2577 {
 
 	public static void main(String[] args) {
 		
