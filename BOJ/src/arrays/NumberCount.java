@@ -17,12 +17,10 @@ public class NumberCount {
 		
 		String temp = String.valueOf(mulResult);
 		
-		System.out.println(temp.charAt(0));
-		
 		for (int idx = 0; idx < temp.length(); idx++) {
 			for (int idx2 = 0; idx2 < 10; idx2++) {
 				
-				if (temp.charAt(idx) == idx2) {
+				if ((temp.charAt(idx) - '0') == idx2) {
 					result[idx2]++;
 				}
 			}
