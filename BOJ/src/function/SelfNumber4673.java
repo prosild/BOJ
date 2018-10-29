@@ -3,7 +3,7 @@ package function;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SelfNumber {
+public class SelfNumber4673 {
 
 	public static void main(String[] args) {
 		
@@ -28,7 +28,6 @@ public class SelfNumber {
 				System.out.println(idx);
 			}
 		}
-		
 		
 	}
 	
